@@ -1,0 +1,14 @@
+- name: Download vim-plug onto machine
+  ansible.builtin.command:
+    cmd: |
+      curl -fLo ~/.vim/autoload/plug.vim \
+      --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+- name: Copy over vim files
+  ansible.builtin.copy:
+    src: "{{ item.0 }}"
+    dest: "{{ item.1 }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+  loop: "{{ vim_plug_files }}"

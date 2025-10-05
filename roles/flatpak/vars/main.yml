@@ -1,0 +1,22 @@
+flatpak_install_names:
+  - com.google.Chrome
+  - md.obsidian.Obsidian
+  - com.discordapp.Discord
+  - com.spotify.Client
+  - net.blix.BlueMail
+  - org.fedoraproject.MediaWriter
+  - me.iepure.devtoolbox
+  - sh.loft.devpod
+  - org.gnome.design.IconLibrary
+  - io.github.halfmexican.Mingle
+  - com.obsproject.Studio
+  - io.podman_desktop.PodmanDesktop
+  - org.virt_manager.virt-manager
+  - dev.zed.Zed
+  - com.bitwarden.desktop
+  - org.gnome.World.Iotas
+  - org.libreoffice.LibreOffice
+
+flatpak_remove_names:
+  - org.mozilla.firefox
+  - org.mozilla.Thunderbird

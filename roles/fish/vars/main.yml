@@ -1,0 +1,3 @@
+fish_files:
+  - ['alias.fish','~/.config/fish/functions/alias.fish']
+  - ['config.fish','~/.config/fish/config.fish']

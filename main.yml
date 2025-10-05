@@ -1,0 +1,29 @@
+# general config setup
+# install flatpaks
+# install homebrew packages
+# setup oh-my-posh the way we want it
+# fish setup
+# vim plug install/setup
+---
+- name: Install Ansible collections
+  hosts: localhost
+  connection: local
+  gather_facts: true
+
+  environment:
+    PATH: "{{ lookup('env', 'HOME') }}/.pyenv/shims:{{ ansible_env.PATH }}"
+
+  pre_tasks:
+    - name: Install community.general collection
+      community.general.ansible_galaxy_install:
+        type: collection
+        name: community.general
+        force: false
+
+  roles:
+    - general-config
+    - flatpak
+    - brew
+    - oh-my-posh
+    - fish
+    - vim-plug

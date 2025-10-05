@@ -1,0 +1,2 @@
+vim_plug_files:
+  - ['vimrc','~/.vimrc']

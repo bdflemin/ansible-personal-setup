@@ -1,0 +1,10 @@
+- name: Make sure home local has a bin dir
+  ansible.builtin.file:
+    name: ~/.local/bin
+    state: directory
+
+- name: Install oh-my-posh on system
+  ansible.builtin.shell:
+    cmd: curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
+  register: ohmyposh_install
+

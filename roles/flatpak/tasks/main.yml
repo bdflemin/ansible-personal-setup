@@ -1,0 +1,19 @@
+---
+- name: Make sure flatpak is installed
+  ansible.builtin.stat:
+    path: /usr/sbin/flatpak
+  register: flatpak_file
+
+- name: Install flatpaks onto system
+  community.general.flatpak:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ flatpak_install_names }}"
+  when: flatpak_file.stat.exists
+
+- name: Remove flatpaks on system
+  community.general.flatpak:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ flatpak_remove_names }}"
+  when: flatpak_file.stat.exists

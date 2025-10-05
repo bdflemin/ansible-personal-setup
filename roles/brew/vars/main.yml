@@ -1,0 +1,28 @@
+brew_taps:
+  - ublue-os/tap
+
+brew_packages:
+  - act
+  - awscli
+  - bat
+  - bitwarden-cli
+  - cosign
+  - eza
+  - fastfetch
+  - fzf
+  - go
+  - jq
+  - jump
+  - pstree
+  - pyenv-virtualenv
+  - ripgrep
+  - rsync
+  - skopeo
+  - tldr
+  - tmux
+  - wget
+  - yq
+  
+brew_casks:
+  - framework-tool
+

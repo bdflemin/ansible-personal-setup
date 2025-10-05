@@ -1,0 +1,20 @@
+- name: Copy over dconf file to homedir
+  ansible.builtin.copy:
+    src: "{{ item[0] }}"
+    dest: ~/{{ item[0] }}
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+  loop: "{{ general_config_dconf_files }}"
+
+- name: Import dconf file for user specific settings
+  ansible.builtin.shell:
+    cmd: |
+      dconf load {{ item[1] }} < ~/{{ item[0] }}
+  loop: "{{ general_config_dconf_files }}"
+
+- name: Clean up dconf file
+  ansible.builtin.file:
+    path: ~/{{ item[0] }}
+    state: absent
+  loop: "{{ general_config_dconf_files }}"

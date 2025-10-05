@@ -1,0 +1,14 @@
+- name: Modify current user with fish
+  ansible.builtin.user:
+    name: "{{ ansible_user }}"
+    shell: /bin/fish
+
+- name: Copy over fish config files
+  ansible.builtin.copy:
+    src: "{{ item.0 }}"
+    dest: "{{ item.1 }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+  loop: "{{ fish_files }}"
+
