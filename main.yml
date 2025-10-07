@@ -21,9 +21,20 @@
         force: false
 
   roles:
-    - general-config
-    - flatpak
-    - brew
-    - oh-my-posh
-    - fish
-    - vim-plug
+    - role: general-config
+      tags: [ general-config ]
+    
+    - role: flatpak
+      tags: [ flatpak ]
+
+    - role: brew
+      tags: [ brew ]
+
+    - role: oh-my-posh
+      tags: [ ohmyposh ]
+
+    - role: fish
+      tags: [ fish ]
+
+    - role: vim-plug
+      tags: [ vimplug ]

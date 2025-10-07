@@ -1,3 +1,9 @@
+fish_dir_structure:
+  - "~/.config/fish"
+  - "~/.config/fish/completions"
+  - "~/.config/fish/functions"
+  - "~/.config/fish/conf.d"
+
 fish_files:
   - ['alias.fish','~/.config/fish/functions/alias.fish']
   - ['config.fish','~/.config/fish/config.fish']

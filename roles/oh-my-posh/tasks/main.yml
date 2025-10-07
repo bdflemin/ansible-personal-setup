@@ -8,3 +8,14 @@
     cmd: curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
   register: ohmyposh_install
 
+- name: Install font onto system
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v{{ item.0 }}/{{ item.1 }}.zip
+    dest: ~/.local/share/fonts/
+    remote_src: yes
+  loop: "{{ ohmyposh_fonts }}"
+
+- name: Update font cache
+  ansible.builtin.command:
+    cmd: fc-cache -f -v
+  register: fc_cache

@@ -1,7 +1,17 @@
+- name: Make sure fish config structure is in place
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0755
+  loop: "{{ fish_dir_structure}}"
+
 - name: Modify current user with fish
   ansible.builtin.user:
     name: "{{ ansible_user }}"
     shell: /bin/fish
+  become: true
 
 - name: Copy over fish config files
   ansible.builtin.copy:
