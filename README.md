@@ -5,6 +5,8 @@ This is just a basic way to make sure I can place all the things I want on my sy
 
 I try and break up all the tasks into roles and I use pyenv to run the ansible plahybook on a new system:
 
+## Setup Process
+
 ```
 brew install pyenv pyenv-virtualenv
 
