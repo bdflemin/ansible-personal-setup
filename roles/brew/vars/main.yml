@@ -5,6 +5,7 @@ brew_packages:
   - act
   - awscli
   - bat
+  - bat-extras
   - bitwarden-cli
   - cosign
   - eza
@@ -22,6 +23,7 @@ brew_packages:
   - tldr
   - tmux
   - wget
+  - xsel
   - yq
   
 brew_casks:

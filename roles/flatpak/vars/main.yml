@@ -16,7 +16,9 @@ flatpak_install_names:
   - com.bitwarden.desktop
   - org.gnome.World.Iotas
   - org.libreoffice.LibreOffice
+  - org.videolan.VLC
 
 flatpak_remove_names:
   - org.mozilla.firefox
   - org.mozilla.Thunderbird
+  - com.github.rafostar.Clapper
