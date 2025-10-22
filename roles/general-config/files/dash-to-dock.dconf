@@ -2,7 +2,7 @@
 background-opacity=0.80000000000000004
 dash-max-icon-size=48
 dock-fixed=false
-dock-position='LEFT'
+dock-position='BOTTOM'
 extend-height=false
 height-fraction=1.0
 icon-size-fixed=false
