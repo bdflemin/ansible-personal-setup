@@ -11,7 +11,6 @@ flatpak_install_names:
   - io.github.halfmexican.Mingle
   - com.obsproject.Studio
   - io.podman_desktop.PodmanDesktop
-  - org.virt_manager.virt-manager
   - dev.zed.Zed
   - com.bitwarden.desktop
   - org.gnome.World.Iotas

@@ -1,11 +1,13 @@
 brew_taps:
   - ublue-os/tap
+  - Valkyrie00/homebrew-bbrew
 
 brew_packages:
   - act
   - awscli
   - bat
   - bat-extras
+  - bbrew
   - bitwarden-cli
   - cosign
   - eza
@@ -14,6 +16,8 @@ brew_packages:
   - go
   - jq
   - jump
+  - nethogs
+  - nvtop
   - pstree
   - pyenv
   - pyenv-virtualenv
