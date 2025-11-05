@@ -4,6 +4,7 @@ brew_taps:
 
 brew_packages:
   - act
+  - atuin
   - awscli
   - bat
   - bat-extras
