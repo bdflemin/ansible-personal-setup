@@ -1,12 +1,10 @@
 flatpak_install_names:
-  - com.google.Chrome
+  - com.brave.Browser
   - md.obsidian.Obsidian
   - com.discordapp.Discord
   - com.spotify.Client
-  - net.blix.BlueMail
   - org.fedoraproject.MediaWriter
   - me.iepure.devtoolbox
-  - sh.loft.devpod
   - org.gnome.design.IconLibrary
   - io.github.halfmexican.Mingle
   - com.obsproject.Studio

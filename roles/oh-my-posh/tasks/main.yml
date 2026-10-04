@@ -1,7 +1,11 @@
 - name: Make sure home local has a bin dir
   ansible.builtin.file:
-    name: ~/.local/bin
+    name: "{{ item }}"
     state: directory
+  loop:
+    - "/home/{{ ansible_user }}/.local/share/fonts"
+    - "/home/{{ ansible_user }}/.local/bin"
+    - "/home/{{ ansible_user }}/oh-my-posh"
 
 - name: Install oh-my-posh on system
   ansible.builtin.shell:
@@ -19,3 +23,12 @@
   ansible.builtin.command:
     cmd: fc-cache -f -v
   register: fc_cache
+
+- name: Grab latest theme
+  ansible.builtin.get_url:
+    src: https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/powerline.omp.json
+    dest: "/home/{{ ansible_user }}/oh-my-posh/powerline.omp.json"
+    user: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0644
+

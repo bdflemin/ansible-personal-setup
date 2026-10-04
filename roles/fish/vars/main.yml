@@ -5,5 +5,7 @@ fish_dir_structure:
   - "~/.config/fish/conf.d"
 
 fish_files:
-  - ['alias.fish','~/.config/fish/functions/alias.fish']
+  - ['my_aliases.fish','~/.config/fish/conf.d/my_aliases.fish']
   - ['config.fish','~/.config/fish/config.fish']
+
+fish_shell: "/usr/bin/fish"

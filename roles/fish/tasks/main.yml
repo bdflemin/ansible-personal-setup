@@ -10,7 +10,7 @@
 - name: Modify current user with fish
   ansible.builtin.user:
     name: "{{ ansible_user }}"
-    shell: /bin/fish
+    shell: "{{ fish_shell }}"
   become: true
 
 - name: Copy over fish config files

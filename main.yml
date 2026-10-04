@@ -10,9 +10,6 @@
   connection: local
   gather_facts: true
 
-  environment:
-    PATH: "{{ lookup('env', 'HOME') }}/.pyenv/shims:{{ ansible_env.PATH }}"
-
   pre_tasks:
     - name: Install community.general collection
       community.general.ansible_galaxy_install:
