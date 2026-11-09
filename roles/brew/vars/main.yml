@@ -27,7 +27,7 @@ brew_packages:
   - ripgrep
   - rsync
   - skopeo
-  - tldr
+  - tlrc
   - tmux
   - wget
   - xsel

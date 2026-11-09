@@ -1,6 +1,7 @@
 - name: Brew tap it
   community.general.homebrew_tap:
     name: "{{ item }}"
+    trust: true
   loop: "{{ brew_taps }}"
 
 - name: Install brew packages needed

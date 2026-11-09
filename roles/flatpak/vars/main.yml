@@ -17,5 +17,5 @@ flatpak_install_names:
 
 flatpak_remove_names:
   - org.mozilla.firefox
-  - org.mozilla.Thunderbird
-  - com.github.rafostar.Clapper
+  - org.mozilla.thunderbird
+  - org.mozilla.thunderbird_esr
